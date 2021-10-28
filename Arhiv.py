@@ -18,6 +18,14 @@ def make_archive(source, dest=Note):
     shutil.move(f"{name}.{format_}",destination)
     make_archive(dir_with_my_file, "./archive.zip")
 
+    import csv
+    with open('бэкапы.csv', mode='w') as csv_file:
+        fieldnames = ['file_name','backup_date','file_size']
+        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerow({'file_name': 'game_data.dump','backup_date':'2021-10-28','file_size':'1024'})
+        writer.writerow({'file_name': 'game_data.dump', 'backup_date': '2021-10-29', 'file_size': '1027'})
+
 import logging, os
 logging.basicConfig(format=' Date-Time : %(asctime)s : Line No. : %(lineno)d [%(livelname)s]- %(message)s', leve)
 log = logging.getLogger(_name_)
