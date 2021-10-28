@@ -16,7 +16,16 @@ def make_archive(source, dest=Note):
     archive_to = os.path.basename(source.strip(os.sep))
     shutil.make_archive(name,format_,archive_from,archive_to)
     shutil.move(f"{name}.{format_}",destination)
- make_archive(dir_with_my_file, "./archive.zip")
+    make_archive(dir_with_my_file, "./archive.zip")
+
+import logging, os
+logging.basicConfig(format=' Date-Time : %(asctime)s : Line No. : %(lineno)d [%(livelname)s]- %(message)s', leve)
+log = logging.getLogger(_name_)
+
+log.info("some action")
+log.warning("some warning")
+log.debug(f"debug info {os.getpid()}")
+log.error("FATAL ARROR!!!")
 #what_to_reserve = ['/home/jake/Study','/home/jack/photo']
 #where_to_save = '/home/jake/Backups'
 #today = where_to_save+os.sep+time.strftime('%Y%m%d')
