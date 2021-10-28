@@ -16,7 +16,7 @@ def make_archive(source, dest=Note):
     archive_to = os.path.basename(source.strip(os.sep))
     shutil.make_archive(name,format_,archive_from,archive_to)
     shutil.move(f"{name}.{format_}",destination)
-    make_archive(dir_with_my_file, "./archive.zip")
+ make_archive(dir_with_my_file, "./archive.zip")
 #what_to_reserve = ['/home/jake/Study','/home/jack/photo']
 #where_to_save = '/home/jake/Backups'
 #today = where_to_save+os.sep+time.strftime('%Y%m%d')
