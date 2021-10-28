@@ -1,8 +1,14 @@
-
+#!/usr/bin/env python
 import shutil
 import os
 import time
 import tempfile
+import pprint
+shutil.copytree('./Arhive.py')
+pprint.pprint(os.listdir(./Arhive.py))
+root_directory='newdir'
+shutil.make_archive("newdirabcd","gztar",root_directory)
+
 tempdir = tempfile.gettempdir() #папка для временного файла
 dir_with_my_file = os.path.join(tempdir, 'filedir')
 os.mkdir(dir_with_my_file, exist_ok=True) #файл случайного контента
